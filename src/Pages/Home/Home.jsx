@@ -10,7 +10,6 @@ const Home = () => {
   const dispatch = useDispatch();
   const [curTag, setCurTag] = useState("");
  
- 
 
 //  It will fetch random quote  
  const getNextQuote = () => {

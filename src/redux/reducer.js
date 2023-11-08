@@ -21,6 +21,7 @@ export function Reducer(state=initValue, action){
         const bookmarkArr = state.bookmarks.filter(item=>{
             return item._id !== action.payload;
         })
+        // checking if current random quote is equal to what i am deleting in bookmark section , i will also remove bookmark from here 
         if(state.random._id===action.payload){
             return {...state, random : {...state.random, isBookmark:false}, bookmarks : bookmarkArr}
         }else{
