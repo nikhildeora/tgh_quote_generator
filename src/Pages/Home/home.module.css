@@ -1,0 +1,21 @@
+.home_div{
+    width: 100%;
+    height: 100vh;
+}
+
+.next_quote_button{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: #009c51;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    transition: all 0.5s linear;
+    margin-top: 2rem;
+}
+
+.next_quote_button:hover{
+    background-color: #06a458;
+}

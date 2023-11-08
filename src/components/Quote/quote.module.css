@@ -1,0 +1,18 @@
+.quote_main_top_div{
+    width: 40%;
+    min-height: 40px;
+    margin: 5rem auto;
+    background-color: #d05252;
+    border-radius: 1rem;
+    color: white;
+    padding: 0.3rem 3rem;
+}
+
+.quote_content_para{
+   font-size: 1.2rem;
+}
+
+.quote_author{
+    text-align: center;
+    margin-top: 3rem;
+}
