@@ -1,4 +1,4 @@
-import { RANDOM_QUOTE, BOOKMARK_QUOTE, FETCH_ALL_TAGS } from "./actionTypes";
+import { RANDOM_QUOTE, BOOKMARK_QUOTE, FETCH_ALL_TAGS, DELETE_BOOKMARK_QUOTE } from "./actionTypes";
 
 const initValue = {
     random : {},
@@ -16,6 +16,16 @@ export function Reducer(state=initValue, action){
     }
     case FETCH_ALL_TAGS : {
         return {...state, tags : [...action.payload]};
+    }
+    case DELETE_BOOKMARK_QUOTE : {
+        const bookmarkArr = state.bookmarks.filter(item=>{
+            return item._id !== action.payload;
+        })
+        if(state.random._id===action.payload){
+            return {...state, random : {...state.random, isBookmark:false}, bookmarks : bookmarkArr}
+        }else{
+            return {...state, bookmarks : bookmarkArr};
+        }
     }
     default : {
         return state;

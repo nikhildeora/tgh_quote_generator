@@ -16,3 +16,16 @@
     text-align: center;
     margin-top: 3rem;
 }
+
+.bookmark_main_div{
+    position: relative;
+}
+
+.delete_bookmark_cross{
+   font-size: 2rem;
+   color: black;
+   position: absolute;
+   bottom: 0rem;
+   right: 4%;
+   cursor: pointer;
+}

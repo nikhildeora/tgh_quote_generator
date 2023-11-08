@@ -1,4 +1,4 @@
-import { RANDOM_QUOTE, BOOKMARK_QUOTE, FETCH_ALL_TAGS } from "./actionTypes";
+import { RANDOM_QUOTE, BOOKMARK_QUOTE, FETCH_ALL_TAGS, DELETE_BOOKMARK_QUOTE } from "./actionTypes";
 import { fetch_all_tags_api, generate_random_quote_api } from "./api";
 
 export const funGenerateRandomQoute =
@@ -13,6 +13,8 @@ export const funGenerateRandomQoute =
   };
 
 export const funBookmarkQuote = (quote_body) => ({ type: BOOKMARK_QUOTE, payload: quote_body });
+
+export const funDeleteBookmarkQuote = (quote_id) => ({type:DELETE_BOOKMARK_QUOTE, payload:quote_id});
 
 export const funFetchAllTags = () => async (dispatch) => {
   try {
